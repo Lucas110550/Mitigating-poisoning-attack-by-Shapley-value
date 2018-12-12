@@ -1,7 +1,13 @@
 import numpy as np
 
+parser = argparse.ArgumentParser(description = None)
+parser.add_argument('--num', type=int, required = True)
+args = parser.parse_args()
+
+poison_num = args.num
+
 f = open("resultnew.txt", "r")
-m = 240
+m = poison_num
 rubbish = np.zeros((600, m))
 mark = False
 count = 0
